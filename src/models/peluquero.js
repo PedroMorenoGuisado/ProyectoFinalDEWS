@@ -8,4 +8,4 @@ const usuarioSchema = new Schema({
   valoracion : {type: Number, require: true},
 });
 
-module.exports = model('Usuario', usuarioSchema);
+module.exports = model('Peluquero', usuarioSchema);

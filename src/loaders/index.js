@@ -1,7 +1,9 @@
 const expressLoader = require('./express');
+const mongodbLoader = require('./mongodb');
 
 function init(app, config) {
-expressLoader(app, config.security);
+expressLoader(app);
+mongodbLoader(config.mongodb);
 }
 
 module.exports = {

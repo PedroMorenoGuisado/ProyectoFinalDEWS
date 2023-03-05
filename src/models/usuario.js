@@ -5,8 +5,8 @@ const usuarioSchema = new Schema({
   alias: { type: String, require: true, unique: true },
   nombre: { type: String, require: true },
   password: { type: String, require: true },
-  reservas: { type: types.ObjectId, ref: 'Reserva' },
-  historial: { type: types.ObjectId, ref: 'Reserva' },
+  reserva: { type: types.ObjectId, ref: 'Reserva' },
+  historial: [{ type: types.ObjectId, ref: 'Reserva' }],
 });
 
 module.exports = model('Usuario', usuarioSchema);
